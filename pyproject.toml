@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+
+[project]
+name = "movielens-recommender"
+version = "0.1.0"
+description = "A basic collaborative filtering recommender using MovieLens"
+authors = [
+  { name="Vinay", email="vinaykanuku7565@gmail.com" }
+]
+readme = "README.md"
+requires-python = ">=3.8"
+ 
+
+[project.scripts]
+recommend = "recommend:main"

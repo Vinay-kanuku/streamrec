@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env
+data/
+.vscode
+build/
+stream_ml.egg-info
+movielens_recommender.egg-info
+venv/
+item_similarity_cache.pkl
+/tests
+/processed_data
