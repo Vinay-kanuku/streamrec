@@ -1,0 +1,18 @@
+schema: '2.0'
+stages:
+  filter:
+    cmd: python src/preprocessing/filter_sparse.py
+    deps:
+    - path: processed_data/clean/ratings_clean.csv
+      hash: md5
+      md5: 19436373490fec8b125cbf81b2541fbb
+      size: 653260891
+    - path: src/preprocessing/filter_sparse.py
+      hash: md5
+      md5: 8d4ee5d9839786859a920ebf9051ae3f
+      size: 1294
+    outs:
+    - path: processed_data/filtered/ratings_filtered.csv
+      hash: md5
+      md5: bc9042aebc7650b02bd6a38fe35d2086
+      size: 650181717
