@@ -16,3 +16,43 @@ stages:
       hash: md5
       md5: bc9042aebc7650b02bd6a38fe35d2086
       size: 650181717
+  encode:
+    cmd: python src/preprocessing/encoding.py
+    deps:
+    - path: processed_data/filtered/ratings_filtered.csv
+      hash: md5
+      md5: bc9042aebc7650b02bd6a38fe35d2086
+      size: 650181717
+    - path: src/preprocessing/encoding.py
+      hash: md5
+      md5: d05598288cddaefabf49b54bc15f5354
+      size: 6144
+    outs:
+    - path: processed_data/encoded/movie2index.json
+      hash: md5
+      md5: e6469491f78709940432db88e30f0ccf
+      size: 377262
+    - path: processed_data/encoded/ratings_encoded.csv
+      hash: md5
+      md5: 04656cb9dcaf6c6a25f9b5ffbd3167d2
+      size: 930428322
+    - path: processed_data/encoded/user2index.json
+      hash: md5
+      md5: 5a00c6ebdb76754cf485ff6cf16a00fc
+      size: 2703523
+  build_matrix:
+    cmd: python src/preprocessing/build_matrix.py
+    deps:
+    - path: processed_data/encoded/ratings_encoded.csv
+      hash: md5
+      md5: 04656cb9dcaf6c6a25f9b5ffbd3167d2
+      size: 930428322
+    - path: src/preprocessing/build_matrix.py
+      hash: md5
+      md5: 8d92ed33dcfbcb62ec763cb7b57b0567
+      size: 9499
+    outs:
+    - path: processed_data/matrix/user_item_matrix.npz
+      hash: md5
+      md5: 585cb694687fdbe3261e7eea971bb30d
+      size: 54270151
