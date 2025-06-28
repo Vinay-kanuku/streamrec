@@ -11,7 +11,7 @@ MOVIES_FILE = DATA_DIR / "movies.csv"
 # Clean data
 CLEAN_DIR = BUILD_DIR / "clean"
 CLEAN_RATINGS_FILE = CLEAN_DIR / "ratings_clean.csv"  # FIXED: Full path
-CLEAN_MOVIES_FILE = CLEAN_DIR / "movies_clean.csv"    # FIXED: Full path
+CLEAN_MOVIES_FILE = CLEAN_DIR / "movies_clean.csv"  # FIXED: Full path
 
 # Filtered data
 FILTER_DIR = BUILD_DIR / "filtered"

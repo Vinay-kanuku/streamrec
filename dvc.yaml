@@ -1,0 +1,26 @@
+stages:
+  filter:
+    cmd: python src/preprocessing/filter_sparse.py
+    deps:
+      - src/preprocessing/filter_sparse.py
+      - processed_data/clean/ratings_clean.csv
+    outs:
+      - processed_data/filtered/ratings_filtered.csv
+
+  encode:
+    cmd: python src/preprocessing/encoding.py
+    deps:
+      - src/preprocessing/encoding.py
+      - processed_data/filtered/ratings_filtered.csv
+    outs:
+      - processed_data/encoded/ratings_encoded.csv
+      - processed_data/encoded/user2index.json
+      - processed_data/encoded/movie2index.json
+
+  build_matrix:
+    cmd: python src/preprocessing/build_matrix.py
+    deps:
+      - src/preprocessing/build_matrix.py
+      - processed_data/encoded/ratings_encoded.csv
+    outs:
+      - processed_data/matrix/user_item_matrix.npz

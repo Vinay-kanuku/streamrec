@@ -9,8 +9,8 @@ stages:
       size: 653260891
     - path: src/preprocessing/filter_sparse.py
       hash: md5
-      md5: 8d4ee5d9839786859a920ebf9051ae3f
-      size: 1294
+      md5: c9cae8bae220d5f79899812aba77a0fa
+      size: 1366
     outs:
     - path: processed_data/filtered/ratings_filtered.csv
       hash: md5
