@@ -269,7 +269,7 @@ def clear_cache():
 # Example usage and testing
 if __name__ == "__main__":
     # Test single user recommendation
-    user_id = 0
+    user_id = int(input("Enter the UserID: "))
     recommendations, scores = recommend_items(user_id, top_k=5)
     print(f"Recommendations for user {user_id}: {recommendations}")
     print(f"Scores: {scores}")

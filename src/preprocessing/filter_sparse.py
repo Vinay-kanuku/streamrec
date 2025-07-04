@@ -11,6 +11,7 @@ from config import (
 )
 
 
+
 def filter_sparse_users_movies():
 
     ratings = pl.read_csv(CLEAN_RATINGS_FILE)

@@ -9,8 +9,8 @@ stages:
       size: 653260891
     - path: src/preprocessing/filter_sparse.py
       hash: md5
-      md5: c9cae8bae220d5f79899812aba77a0fa
-      size: 1366
+      md5: 4575f155dedc6e3fe31068f5b6621d53
+      size: 1303
     outs:
     - path: processed_data/filtered/ratings_filtered.csv
       hash: md5
@@ -25,8 +25,8 @@ stages:
       size: 650181717
     - path: src/preprocessing/encoding.py
       hash: md5
-      md5: d05598288cddaefabf49b54bc15f5354
-      size: 6144
+      md5: d3a5bdfd1b10e184f164b478bfc83d7a
+      size: 5862
     outs:
     - path: processed_data/encoded/movie2index.json
       hash: md5
@@ -49,8 +49,8 @@ stages:
       size: 930428322
     - path: src/preprocessing/build_matrix.py
       hash: md5
-      md5: 8d92ed33dcfbcb62ec763cb7b57b0567
-      size: 9499
+      md5: dd64e8e5ecc9ca50fd9ee15b3ab8c279
+      size: 8983
     outs:
     - path: processed_data/matrix/user_item_matrix.npz
       hash: md5
