@@ -1,8 +1,12 @@
-from src.models.collaborative_filterring import recommend_items 
+import json
+
+import polars as pl
+
 from src.config import ENCODED_RATINGS_FILE, MOVIE2INDEX_FILE
-import polars as pl 
-import json 
+from src.models.collaborative_filterring import recommend_items
+
 js = json.loads(str(MOVIE2INDEX_FILE))
+
 
 def get_movie_title(df: pl.DataFrame, movie_id: int) -> str | None:
     result = df.filter(pl.col("movieId") == movie_id)
@@ -16,4 +20,3 @@ print(f"Scores: {scores}")
 df = pl.read_csv(ENCODED_RATINGS_FILE)
 for rec in recommendations:
     print(get_movie_title(df, js[rec]))
-

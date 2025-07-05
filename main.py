@@ -13,9 +13,8 @@
 # print(f"Recommendations for user {user_id}: {recommendations}")
 # print(f"Scores: {scores}")
 
-from models.resommend import ItemBasedFiltering, MovieRecommender 
+from models.resommend import ItemBasedFiltering, MovieRecommender
+
 item = ItemBasedFiltering()
 ob = MovieRecommender(item)
 ob.recommed_movie(49)
-
-
